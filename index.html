@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image On Button Hover</title>
+</head>
+<body>
+    <div>
+    <button type="button"></button>
+    <div id='image'></div>
+    <div>
+</body>
+
+<style>
+
+    div{
+        width: 100%; /*Makes divs as wide as window*/
+        aspect-ratio: 1/1; /*Makes div height same as width. Same ratio as images*/
+    }
+
+    #image{
+        background-size: cover; /*Makes background same size as the div*/
+        background-image: url("Images/HoverHere.png");
+    }
+    button{
+        /*Size and poition automatically adjusts to the circle's location relative to the window's size*/
+        width: 12%;
+        height: 12%;
+        left:42.2%;
+        top: 70%;
+        position:relative;
+        border: none;
+        background: transparent; /*Makes button fully invisible. When testing, change to black*/
+        border-radius: 50%; /*Makes button round*/
+    }
+
+    /*Changing the "image" div's background by hovering over button*/
+    button:hover ~ #image{
+        background-image: url("Images/Boom.png");
+    }
+</style>
+</html>
